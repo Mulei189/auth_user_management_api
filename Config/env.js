@@ -1,0 +1,8 @@
+import { config } from "dotenv";
+config({path: `.env.${process.env.NODE_ENV} || development`}.local);
+export const {
+    PORT=5500,
+    MONGO_URI='mongodb://localhost:27017/auth_user_management_api',
+    NODE_ENV='development',
+    JWT_SECRET='807b1c6e11157e4c64e36dc2783999856b6dc218d0cfb7b7e6f35900ec357eb6'
+}=process.env;
